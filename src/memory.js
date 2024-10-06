@@ -24,9 +24,19 @@ class MemoryGame {
 
   checkIfPair(card1, card2) {
     // ... write your code here
+    this.pairsClicked +=1;
+    if(card1 === card2){
+      this.pairsGuessed +=1;
+      return true;
+
+    }return false
+
   }
 
   checkIfFinished() {
     // ... write your code here
+    if (this.pairsGuessed === this.cards.length / 2) {
+      return true
+    }return false;
   }
-}
+} 
